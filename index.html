@@ -1,113 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AnatomyLab | Explore the Human Body</title>
-  <meta name="description" content="An interactive guide to human body anatomy: systems, organs, quiz and facts.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repo Genesis — Feature Showcase</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Shippori+Mincho:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/explorer.css">
-  <link rel="stylesheet" href="css/quiz.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="brand">Anatomy<span>Lab</span></a>
-      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-      <nav id="nav-links" class="nav-links" aria-label="Main">
-        <a href="#home">Home</a>
-        <a href="#systems">Systems</a>
-        <a href="#explorer">Explorer</a>
-        <a href="#search">Search</a>
-        <a href="#quiz">Quiz</a>
-        <a href="#facts">Facts</a>
-      </nav>
-      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+
+  <header class="showcase-header">
+    <div class="brand">
+      <div class="brand-mark">Z</div>
+      <div class="brand-text">
+        <span class="brand-name">Repo Genesis</span>
+        <span class="brand-tag">v5.0.7 · Feature Showcase</span>
+      </div>
     </div>
+    <nav class="showcase-nav">
+      <a href="#features">Features</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#try">Try it</a>
+    </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div>
-          <p class="eyebrow">Interactive anatomy guide</p>
-          <h1>Discover how the human body works</h1>
-          <p class="lead">Explore ten body systems, click through major organs on an interactive body map, search the atlas and test yourself with a quiz.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#explorer">Open the body map</a>
-            <a class="btn btn-ghost" href="#systems">Browse systems</a>
-          </div>
-        </div>
-        <ul class="stats" id="stats"></ul>
+    <section id="try" class="hero">
+      <span class="eyebrow">◆ ZeroCommit · Repository Creation Engine</span>
+      <h1>Create GitHub repositories<br><em>without leaving the studio.</em></h1>
+      <p class="lede">Account-aware, org-aware, name-validated, and staged-change-aware repository creation. Live-preview the URL, pick personal or organization scope, and carry your active staged buffers straight into the brand-new repo.</p>
+      <div class="hero-actions">
+        <button id="btnOpenModal" class="btn btn-chrome btn-lg">Open Create Repository</button>
+        <a href="#features" class="btn btn-dark-steel btn-lg">Explore features</a>
+      </div>
+      <div class="demo-config">
+        <span class="demo-config-label">Mode</span>
+        <label class="hw-toggle">
+          <input type="checkbox" id="toggleLiveMode">
+          <span class="toggle-slider"></span>
+          <span>Live GitHub API</span>
+        </label>
+        <input type="password" id="livePatInput" class="input-field-sm" placeholder="ghp_..." style="display:none;" autocomplete="off" spellcheck="false">
+        <span id="modeHint" class="mode-hint">Demo mode — simulated responses</span>
       </div>
     </section>
 
-    <section id="systems" class="section">
-      <div class="container">
-        <h2>Body systems</h2>
-        <p class="section-sub">Select a system to see what it does and which organs belong to it.</p>
-        <div id="system-grid" class="card-grid"></div>
+    <section id="features" class="features">
+      <div class="section-head">
+        <h2>What this feature does</h2>
+        <p>Six capabilities shipped in a single modal.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-index">01 · ACCOUNT</div>
+          <h3>Multi-account selection</h3>
+          <p>Pick the exact token and identity that should own the repository. Demo accounts and live PAT sessions share one selector.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-index">02 · OWNER</div>
+          <h3>Personal or organization</h3>
+          <p>Target your personal handle or any organization your token can write to. Orgs are resolved live from <code>/user/orgs</code>.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-index">03 · PREVIEW</div>
+          <h3>Live URL preview</h3>
+          <p><code>github.com / owner / name</code> updates on every keystroke, so you always see the exact destination before you create.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-index">04 · VALIDATION</div>
+          <h3>Real-time name checks</h3>
+          <p>Blocks leading/trailing dots or hyphens, <code>.git</code> suffix, and non-alphanumeric characters before the network call even fires.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-index">05 · VISIBILITY</div>
+          <h3>Segmented private/public toggle</h3>
+          <p>Private by default, with a hardware-style segmented control that mirrors the exact ZeroCommit visual language.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-index">06 · CARRYOVER</div>
+          <h3>Staged change carryover</h3>
+          <p>Keep your staged buffers when you spin up a new repo. The first push lands directly into the new target instead of being purged.</p>
+        </article>
       </div>
     </section>
 
-    <section id="explorer" class="section alt">
-      <div class="container">
-        <h2>Interactive body map</h2>
-        <p class="section-sub">Click a glowing point to learn about an organ. Filter by system to focus.</p>
-        <div id="filter-chips" class="chips" role="group" aria-label="Filter by system"></div>
-        <div class="explorer">
-          <div id="body-map" class="body-map"></div>
-          <article id="organ-panel" class="organ-panel" aria-live="polite"></article>
-        </div>
+    <section id="pipeline" class="pipeline">
+      <div class="section-head">
+        <h2>Three-step pipeline</h2>
+        <p>From click to live repo in one flow.</p>
+      </div>
+      <div class="pipeline-grid">
+        <article class="pipeline-step-card">
+          <div class="pipeline-step-num">1</div>
+          <h3>Authenticate</h3>
+          <p>Resolve the active PAT or OAuth account from the vault (or the live PAT field in this showcase) and probe <code>/user</code> + <code>/user/orgs</code>.</p>
+        </article>
+        <article class="pipeline-step-card">
+          <div class="pipeline-step-num">2</div>
+          <h3>Create</h3>
+          <p>POST <code>/user/repos</code> or <code>/orgs/{org}/repos</code> with <code>auto_init: true</code> so the default branch ref exists immediately (avoids Git 409 on the first push).</p>
+        </article>
+        <article class="pipeline-step-card">
+          <div class="pipeline-step-num">3</div>
+          <h3>Settle</h3>
+          <p>Save the repo pointer, bump the workspace generation fence, refresh global labels, and optionally carry staged buffers into the new workspace.</p>
+        </article>
       </div>
     </section>
 
-    <section id="search" class="section">
-      <div class="container narrow">
-        <h2>Search the atlas</h2>
-        <p class="section-sub">Look up any organ or system by name or keyword.</p>
-        <input id="search-input" class="search-input" type="search" placeholder="Try: heart, digestion, hormone..." autocomplete="off">
-        <ul id="search-results" class="results"></ul>
+    <section class="history-section">
+      <div class="section-head">
+        <h2>Created repositories</h2>
+        <p>Persisted locally so the showcase keeps a visible trail.</p>
       </div>
-    </section>
-
-    <section id="quiz" class="section alt">
-      <div class="container narrow">
-        <h2>Test your knowledge</h2>
-        <div id="quiz-box" class="quiz-box"></div>
-      </div>
-    </section>
-
-    <section id="facts" class="section">
-      <div class="container narrow center">
-        <h2>Amazing body facts</h2>
-        <blockquote id="fact-text" class="fact"></blockquote>
-        <button id="fact-btn" class="btn">Another fact</button>
-      </div>
+      <div id="historyList" class="history-list"></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>AnatomyLab is for education only and is not medical advice.</p>
-      <a href="#home">Back to top ↑</a>
-    </div>
+  <footer class="showcase-footer">
+    <span>Repo Genesis showcase · Built on the ZeroCommit monochromatic design system</span>
+    <span class="sound-note">🔊 Audio cues wired via Web Audio API — no asset files required</span>
   </footer>
 
-  <dialog id="modal" class="modal">
-    <div class="modal-head">
-      <h3 id="modal-title"></h3>
-      <button id="modal-close" class="icon-btn" aria-label="Close">✕</button>
-    </div>
-    <div id="modal-body" class="modal-body"></div>
-  </dialog>
-
-  <script type="module" src="js/main.js"></script>
+  <div id="toastContainer" class="toast-container"></div>
+  <script type="module" src="genesis.js"></script>
 </body>
 </html>
