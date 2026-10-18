@@ -1,32 +1,34 @@
 :root {
-  --bg: #f1f7f4;
-  --bg-alt: #e3efe9;
-  --surface: #ffffff;
-  --text: #0d1f18;
-  --muted: #55705f;
-  --primary: #0a9b5c;
-  --primary-dark: #077a47;
-  --accent: #d6285a;
-  --on-primary: #ffffff;
-  --glow: rgba(10, 155, 92, 0.25);
-  --border: #cfe2d8;
-  --shadow: 0 6px 22px rgba(13, 31, 24, 0.1);
-  --radius: 16px;
+  --bg: #f4efe6;
+  --bg-alt: #ebe4d6;
+  --surface: #faf7f0;
+  --text: #2b2623;
+  --muted: #7a7167;
+  --primary: #2f4a63;
+  --primary-dark: #223649;
+  --accent: #b5402c;
+  --on-primary: #f4efe6;
+  --glow: transparent;
+  --border: #d8cfbe;
+  --shadow: none;
+  --radius: 2px;
+  --serif: "Shippori Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+  --sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg: #050807;
-  --bg-alt: #0a110f;
-  --surface: #0f1815;
-  --text: #e6f4ee;
-  --muted: #8aa89c;
-  --primary: #2cff9a;
-  --primary-dark: #12c474;
-  --accent: #ff3d71;
-  --on-primary: #03140c;
-  --glow: rgba(44, 255, 154, 0.28);
-  --border: #1c2e27;
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  --bg: #14161a;
+  --bg-alt: #181b20;
+  --surface: #1b1e23;
+  --text: #e8e2d4;
+  --muted: #968e80;
+  --primary: #9bb2c8;
+  --primary-dark: #b7c8d9;
+  --accent: #c8543f;
+  --on-primary: #14161a;
+  --glow: transparent;
+  --border: #2a2d33;
+  --shadow: none;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -35,20 +37,23 @@ html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
+  font-weight: 400;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
   transition: background 0.3s, color 0.3s;
 }
 
-h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5em; }
-h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
-h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: 0.06em; }
+h1, h2, h3 { line-height: 1.4; margin: 0 0 0.6em; }
+h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
 p { margin: 0 0 1em; }
 a { color: var(--accent); text-decoration: none; }
 ul { padding: 0; margin: 0; list-style: none; }
 button { font: inherit; cursor: pointer; }
 input { font: inherit; }
 
-:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }

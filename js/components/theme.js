@@ -7,7 +7,7 @@ function apply(theme) {
 }
 
 export function initTheme() {
-  const preferred = "dark";
+  const preferred = "light";
   apply(load("theme", preferred));
   qs("#theme-toggle").addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");
