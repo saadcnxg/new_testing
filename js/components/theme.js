@@ -7,7 +7,7 @@ function apply(theme) {
 }
 
 export function initTheme() {
-  const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  const preferred = "dark";
   apply(load("theme", preferred));
   qs("#theme-toggle").addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");

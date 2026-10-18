@@ -9,7 +9,7 @@
   font-size: 0.9rem;
 }
 .chip:hover { border-color: var(--primary); }
-.chip.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+.chip.active { background: var(--primary); border-color: var(--primary); color: var(--on-primary); box-shadow: 0 0 14px var(--glow); }
 
 .explorer { display: grid; grid-template-columns: minmax(240px, 340px) 1fr; gap: 2rem; align-items: start; }
 
@@ -21,11 +21,17 @@
   box-shadow: var(--shadow);
 }
 .body-map svg { width: 100%; height: auto; display: block; }
-.silhouette { fill: color-mix(in srgb, var(--muted) 22%, transparent); }
+.silhouette {
+  fill: color-mix(in srgb, var(--primary) 7%, transparent);
+  stroke: color-mix(in srgb, var(--primary) 55%, transparent);
+  stroke-width: 1.2;
+  filter: drop-shadow(0 0 6px var(--glow));
+}
 
 .hotspot {
   fill: var(--primary);
-  stroke: #fff;
+  stroke: var(--bg);
+  filter: drop-shadow(0 0 5px var(--primary));
   stroke-width: 2;
   cursor: pointer;
   animation: pulse 2s infinite;
