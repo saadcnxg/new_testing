@@ -1,0 +1,31 @@
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .explorer { grid-template-columns: 1fr; }
+  .body-map { max-width: 340px; margin-inline: auto; }
+}
+
+@media (max-width: 720px) {
+  .nav-toggle { display: inline-block; }
+  .header-inner { position: relative; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: -4%;
+    right: -4%;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 4%;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.8rem 0; }
+  #theme-toggle { margin-left: 0; }
+  .section { padding: 3rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

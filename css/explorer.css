@@ -1,0 +1,60 @@
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+
+.chip {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+}
+.chip:hover { border-color: var(--primary); }
+.chip.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.explorer { display: grid; grid-template-columns: minmax(240px, 340px) 1fr; gap: 2rem; align-items: start; }
+
+.body-map {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+.body-map svg { width: 100%; height: auto; display: block; }
+.silhouette { fill: color-mix(in srgb, var(--muted) 22%, transparent); }
+
+.hotspot {
+  fill: var(--primary);
+  stroke: #fff;
+  stroke-width: 2;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: opacity 0.2s;
+}
+.hotspot:hover, .hotspot.active { fill: var(--accent); }
+.hotspot.active { r: 9; animation: none; }
+.hotspot.dim { opacity: 0.12; pointer-events: none; animation: none; }
+
+@keyframes pulse {
+  0% { stroke-opacity: 1; }
+  50% { stroke-opacity: 0.3; }
+  100% { stroke-opacity: 1; }
+}
+
+.organ-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  min-height: 280px;
+}
+.organ-panel h3 { font-size: 1.7rem; }
+.organ-panel .fact-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+.organ-panel .placeholder { color: var(--muted); }

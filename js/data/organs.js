@@ -1,0 +1,17 @@
+export const organs = [
+  { id: "brain", name: "Brain", system: "nervous", x: 100, y: 32, description: "The control center of the body, made of billions of neurons that process information, store memories and direct every action.", fact: "The brain uses about 20% of the body's energy while being only about 2% of its weight." },
+  { id: "thyroid", name: "Thyroid", system: "endocrine", x: 100, y: 64, description: "A butterfly-shaped gland in the neck that releases hormones controlling metabolism.", fact: "It is one of the largest endocrine glands in the body." },
+  { id: "spine", name: "Spine", system: "skeletal", x: 100, y: 84, description: "A column of 33 vertebrae that supports the body and protects the spinal cord.", fact: "Adults have 26 movable or fused spinal units, but 33 vertebrae before fusion." },
+  { id: "lungs", name: "Lungs", system: "respiratory", x: 78, y: 105, description: "Two spongy organs where oxygen enters the blood and carbon dioxide leaves it.", fact: "Unfolded, the surface of the alveoli would cover roughly half a tennis court." },
+  { id: "heart", name: "Heart", system: "cardiovascular", x: 112, y: 116, description: "A four-chambered muscular pump that moves blood around the body.", fact: "It beats about 100,000 times every day." },
+  { id: "spleen", name: "Spleen", system: "lymphatic", x: 128, y: 138, description: "Filters old red blood cells and stores white blood cells that fight infection.", fact: "You can live a healthy life without a spleen." },
+  { id: "liver", name: "Liver", system: "digestive", x: 82, y: 148, description: "The largest internal organ. It processes nutrients, makes bile and neutralizes toxins.", fact: "The liver can regenerate after part of it is removed." },
+  { id: "stomach", name: "Stomach", system: "digestive", x: 114, y: 154, description: "A muscular sac that churns food with acid and enzymes.", fact: "Stomach lining renews itself every few days to resist its own acid." },
+  { id: "pancreas", name: "Pancreas", system: "endocrine", x: 98, y: 168, description: "Makes digestive enzymes and releases insulin and glucagon to control blood sugar.", fact: "It has both digestive and hormonal roles." },
+  { id: "kidneys", name: "Kidneys", system: "urinary", x: 98, y: 186, description: "Two bean-shaped organs that filter blood and produce urine.", fact: "Together they filter about 180 liters of blood plasma daily." },
+  { id: "intestines", name: "Intestines", system: "digestive", x: 100, y: 210, description: "The small intestine absorbs nutrients and the large intestine absorbs water and forms waste.", fact: "The small intestine is around 6 meters long in adults." },
+  { id: "bladder", name: "Bladder", system: "urinary", x: 100, y: 230, description: "A stretchy organ that stores urine until it is released.", fact: "An adult bladder can hold roughly 400 to 600 milliliters." },
+  { id: "biceps", name: "Biceps", system: "muscular", x: 49, y: 110, description: "A muscle on the front of the upper arm that bends the elbow and rotates the forearm.", fact: "Its name means two heads in Latin." },
+  { id: "skin", name: "Skin", system: "integumentary", x: 151, y: 170, description: "The body's largest organ. It guards against germs, holds in water and senses the world.", fact: "Skin renews its outer layer roughly every four weeks." },
+  { id: "femur", name: "Femur", system: "skeletal", x: 81, y: 300, description: "The thigh bone is the longest and strongest bone in the body.", fact: "It can support many times the weight of the body when standing." },
+];

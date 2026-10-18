@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnatomyLab | Explore the Human Body</title>
+  <meta name="description" content="An interactive guide to human body anatomy: systems, organs, quiz and facts.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/explorer.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Anatomy<span>Lab</span></a>
+      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav id="nav-links" class="nav-links" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#systems">Systems</a>
+        <a href="#explorer">Explorer</a>
+        <a href="#search">Search</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#facts">Facts</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Interactive anatomy guide</p>
+          <h1>Discover how the human body works</h1>
+          <p class="lead">Explore ten body systems, click through major organs on an interactive body map, search the atlas and test yourself with a quiz.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#explorer">Open the body map</a>
+            <a class="btn btn-ghost" href="#systems">Browse systems</a>
+          </div>
+        </div>
+        <ul class="stats" id="stats"></ul>
+      </div>
+    </section>
+
+    <section id="systems" class="section">
+      <div class="container">
+        <h2>Body systems</h2>
+        <p class="section-sub">Select a system to see what it does and which organs belong to it.</p>
+        <div id="system-grid" class="card-grid"></div>
+      </div>
+    </section>
+
+    <section id="explorer" class="section alt">
+      <div class="container">
+        <h2>Interactive body map</h2>
+        <p class="section-sub">Click a glowing point to learn about an organ. Filter by system to focus.</p>
+        <div id="filter-chips" class="chips" role="group" aria-label="Filter by system"></div>
+        <div class="explorer">
+          <div id="body-map" class="body-map"></div>
+          <article id="organ-panel" class="organ-panel" aria-live="polite"></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="search" class="section">
+      <div class="container narrow">
+        <h2>Search the atlas</h2>
+        <p class="section-sub">Look up any organ or system by name or keyword.</p>
+        <input id="search-input" class="search-input" type="search" placeholder="Try: heart, digestion, hormone..." autocomplete="off">
+        <ul id="search-results" class="results"></ul>
+      </div>
+    </section>
+
+    <section id="quiz" class="section alt">
+      <div class="container narrow">
+        <h2>Test your knowledge</h2>
+        <div id="quiz-box" class="quiz-box"></div>
+      </div>
+    </section>
+
+    <section id="facts" class="section">
+      <div class="container narrow center">
+        <h2>Amazing body facts</h2>
+        <blockquote id="fact-text" class="fact"></blockquote>
+        <button id="fact-btn" class="btn">Another fact</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>AnatomyLab is for education only and is not medical advice.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal">
+    <div class="modal-head">
+      <h3 id="modal-title"></h3>
+      <button id="modal-close" class="icon-btn" aria-label="Close">✕</button>
+    </div>
+    <div id="modal-body" class="modal-body"></div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
